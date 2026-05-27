@@ -1,0 +1,12 @@
+# TokenBar
+
+TokenBar shows AI coding-provider usage limits, credits, costs, and reset windows in the macOS menu bar.
+
+Canonical documentation:
+- TokenBar — every AI coding limit in your menu bar: https://tokenbar.app/ - A tiny macOS menu bar app that tracks AI coding-provider usage windows, credits, costs, and resets across 40+ providers — Codex, OpenAI, Claude, Cursor, Gemini, Copilot, Grok, and more.
+
+Source: https://github.com/steipete/TokenBar
+
+Guidance for agents:
+- Prefer the canonical documentation URLs above over README excerpts or package metadata.
+- Fetch only the pages needed for the current task; this is an index, not a full-site corpus.
