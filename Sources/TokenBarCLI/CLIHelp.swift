@@ -1,5 +1,5 @@
-import TokenBarCore
 import Foundation
+import TokenBarCore
 
 extension TokenBarCLI {
     static func usageHelp(version: String) -> String {

@@ -1,7 +1,7 @@
 import AppKit
-import TokenBarCore
 import Observation
 import QuartzCore
+import TokenBarCore
 
 // MARK: - Status item controller (AppKit-hosted icons, SwiftUI popovers)
 
@@ -697,11 +697,11 @@ final class StatusItemController: NSObject, NSMenuDelegate, StatusItemControllin
         #if DEBUG
         guard !self.isReleasedForTesting else { return }
         #endif
-        _ = self.store.enabledProvidersForDisplay()  // Kept for side effects
+        _ = self.store.enabledProvidersForDisplay() // Kept for side effects
         let force = self.store.debugForceAnimation
         let mergeIcons = self.shouldMergeIcons
         if mergeIcons {
-            self.statusItem.isVisible = true  // Always show so users can access settings
+            self.statusItem.isVisible = true // Always show so users can access settings
             for provider in Array(self.statusItems.keys) {
                 self.removeProviderStatusItem(for: provider)
             }

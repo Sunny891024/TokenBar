@@ -1,6 +1,6 @@
 import AppKit
-import TokenBarCore
 import Foundation
+import TokenBarCore
 
 /// Opens Cursor in the user's browser and waits until the normal browser-cookie importer can read a session.
 @MainActor

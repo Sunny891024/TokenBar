@@ -1,6 +1,6 @@
 import AppKit
-import TokenBarCore
 import SwiftUI
+import TokenBarCore
 
 enum AppLanguage: String, CaseIterable, Identifiable {
     case system = ""

@@ -1,6 +1,6 @@
-import TokenBarCore
 import Commander
 import Foundation
+import TokenBarCore
 import XCTest
 @testable import TokenBarCLI
 

@@ -1,6 +1,6 @@
 import AppKit
-import TokenBarCore
 import SwiftUI
+import TokenBarCore
 
 /// SwiftUI card used inside the NSMenu to mirror Apple's rich menu panels.
 struct UsageMenuCardView: View {

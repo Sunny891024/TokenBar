@@ -1,5 +1,5 @@
-import TokenBarCore
 import Foundation
+import TokenBarCore
 @testable import TokenBar
 #if os(macOS)
 import AppKit

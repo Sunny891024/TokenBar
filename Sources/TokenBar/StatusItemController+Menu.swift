@@ -1,8 +1,8 @@
 import AppKit
-import TokenBarCore
 import Observation
 import QuartzCore
 import SwiftUI
+import TokenBarCore
 
 // MARK: - NSMenu construction
 

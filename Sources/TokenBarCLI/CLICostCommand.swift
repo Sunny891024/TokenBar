@@ -1,6 +1,6 @@
-import TokenBarCore
 import Commander
 import Foundation
+import TokenBarCore
 
 extension TokenBarCLI {
     private static let costSupportedProviders: Set<UsageProvider> = [.claude, .codex]

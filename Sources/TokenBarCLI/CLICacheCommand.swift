@@ -1,6 +1,6 @@
-import TokenBarCore
 import Commander
 import Foundation
+import TokenBarCore
 
 extension TokenBarCLI {
     static func runCacheClear(_ values: ParsedValues) {
