@@ -18,7 +18,7 @@ echo -e "${BLUE}==> Fetching upstream changes...${NC}"
 if [ "$TARGET" = "all" ] || [ "$TARGET" = "upstream" ]; then
     git fetch upstream 2>/dev/null || {
         echo -e "${YELLOW}Adding upstream remote...${NC}"
-        git remote add upstream https://github.com/steipete/TokenBar.git
+        git remote add upstream https://github.com/Sunny891024/TokenBar.git
         git fetch upstream
     }
 fi
@@ -58,9 +58,9 @@ remote_default_branch() {
     exit 1
 }
 
-# Check upstream (steipete)
+# Check upstream remote
 if [ "$TARGET" = "all" ] || [ "$TARGET" = "upstream" ]; then
-    echo -e "${BLUE}==> Upstream (steipete/TokenBar) changes:${NC}"
+    echo -e "${BLUE}==> Upstream (Sunny891024/TokenBar) changes:${NC}"
     UPSTREAM_BRANCH=$(remote_default_branch upstream)
     UPSTREAM_REF="upstream/${UPSTREAM_BRANCH}"
     

@@ -171,7 +171,7 @@
 "Managed Codex accounts unavailable" = "托管 Codex 账户不可用";
 "Managed account storage is unreadable. Live account access is still available, " = "托管账户存储不可读。实时账户访问仍可用，";
 "Manual" = "手动";
-"May your tokens never run out—keep agent limits in view." = "愿你的 token 永不耗尽——随时关注智能体额度。";
+"AI usage and quota tracker for your menu bar." = "AI usage and quota tracker for your menu bar.";
 "Menu bar" = "菜单栏";
 "Menu bar auto-shows the provider closest to its rate limit." = "菜单栏会自动显示最接近速率限制的提供商。";
 "Menu bar metric" = "菜单栏指标";
@@ -394,7 +394,7 @@
 "remove_account_message" = "要从 TokenBar 中移除 %@ 吗？其托管的 Codex 主目录将被删除。";
 "version_format" = "版本 %@";
 "workspaceID is set but only opencode, opencodego, and deepgram support workspaceID." = "已设置 workspaceID，但只有 opencode、opencodego 和 deepgram 支持 workspaceID。";
-"© 2026 Peter Steinberger. MIT License." = "© 2026 Peter Steinberger。MIT 许可证。";
+"© 2026 Sunny891024. MIT License." = "MIT License.";
 "section_system" = "系统";
 "section_usage" = "用量";
 "section_automation" = "自动化";
@@ -522,7 +522,7 @@
 "keychain_access_caption" = "禁用所有钥匙串读写。浏览器 Cookie 导入不可用；请在“提供商”中手动粘贴 Cookie 标头。";
 "disable_keychain_access_title" = "禁用钥匙串访问";
 "disable_keychain_access_subtitle" = "启用时阻止任何钥匙串访问。";
-"about_tagline" = "愿你的 token 永不耗尽——随时关注智能体额度。";
+"about_tagline" = "AI usage and quota tracker for your menu bar.";
 "link_github" = "GitHub";
 "link_website" = "网站";
 "link_twitter" = "Twitter";
@@ -531,7 +531,7 @@
 "update_channel" = "更新频道";
 "check_for_updates" = "检查更新…";
 "updates_unavailable" = "此构建中更新不可用。";
-"copyright" = "© 2026 Peter Steinberger。MIT 许可证。";
+"copyright" = "MIT License.";
 "section_logging" = "日志";
 "enable_file_logging" = "启用文件日志";
 "enable_file_logging_subtitle" = "将日志写入 %@ 以进行调试。";

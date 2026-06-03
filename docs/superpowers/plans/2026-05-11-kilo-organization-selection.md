@@ -1419,7 +1419,7 @@ gh repo view noefabris/TokenBar --json url 2>&1 | head -5
 If 404, fork:
 
 ```bash
-gh repo fork steipete/TokenBar --remote=false --clone=false
+gh repo fork Sunny891024/TokenBar --remote=false --clone=false
 ```
 
 - [ ] **Step 12.2: Add fork as a remote (if missing) and push**
@@ -1433,7 +1433,7 @@ git push -u fork feat/kilo-organization-selection
 
 ```bash
 gh pr create \
-  --repo steipete/TokenBar \
+  --repo Sunny891024/TokenBar \
   --base main \
   --head noefabris:feat/kilo-organization-selection \
   --title "Add Kilo organization selection (usage stacking)" \

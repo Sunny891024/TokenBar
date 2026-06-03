@@ -168,7 +168,7 @@
 "Managed Codex accounts unavailable" = "Comptes gestionats de Codex no disponibles";
 "Managed account storage is unreadable. Live account access is still available, " = "L'emmagatzematge de comptes gestionats no es pot llegir. L'accés a comptes en directe encara està disponible, ";
 "Manual" = "Manual";
-"May your tokens never run out—keep agent limits in view." = "Que els teus testimonis no s'esgotin mai: mantén els límits dels teus agents a la vista.";
+"AI usage and quota tracker for your menu bar." = "AI usage and quota tracker for your menu bar.";
 "Menu bar" = "Barra de menús";
 "Menu bar auto-shows the provider closest to its rate limit." = "La barra de menús mostra automàticament el proveïdor més a prop del seu límit.";
 "Menu bar metric" = "Mètrica de la barra de menús";
@@ -386,7 +386,7 @@
 "version_format" = "Versió %@";
 "vertex_ai_login_instructions" = "Per fer un seguiment de l'ús de Vertex AI, autentica't amb Google Cloud.\n\n1. Obre el Terminal\n2. Executa: gcloud auth application-default login\n3. Segueix les indicacions del navegador per iniciar la sessió\n4. Defineix el teu projecte: gcloud config set project PROJECT_ID\n\nVols obrir el Terminal ara?";
 "workspaceID is set but only opencode, opencodego, and deepgram support workspaceID." = "workspaceID està definit, però només opencode, opencodego i deepgram admeten workspaceID.";
-"© 2026 Peter Steinberger. MIT License." = "© 2026 Peter Steinberger. Llicència MIT.";
+"© 2026 Sunny891024. MIT License." = "MIT License.";
 
 /* General Pane */
 "section_system" = "Sistema";
@@ -526,7 +526,7 @@
 "disable_keychain_access_subtitle" = "Impedeix qualsevol accés al Clauer mentre estigui activat.";
 
 /* About Pane */
-"about_tagline" = "Que els teus testimonis no s'esgotin mai: mantén els límits dels teus agents a la vista.";
+"about_tagline" = "AI usage and quota tracker for your menu bar.";
 "link_github" = "GitHub";
 "link_website" = "Lloc web";
 "link_twitter" = "Twitter";
@@ -535,7 +535,7 @@
 "update_channel" = "Canal d'actualitzacions";
 "check_for_updates" = "Cerca actualitzacions…";
 "updates_unavailable" = "Actualitzacions no disponibles en aquesta compilació.";
-"copyright" = "© 2026 Peter Steinberger. Llicència MIT.";
+"copyright" = "MIT License.";
 
 /* Debug Pane */
 "section_logging" = "Registre";

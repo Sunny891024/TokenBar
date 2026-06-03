@@ -532,7 +532,7 @@ struct StatusMenuCodexSwitcherTests {
                 canRemove: false),
             CodexVisibleAccount(
                 id: "managed:aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee",
-                email: "steipete-with-a-very-long-label@gmail.com",
+                email: "very-long-label@example.com",
                 workspaceLabel: nil,
                 workspaceAccountID: "account-gmail",
                 storedAccountID: UUID(),

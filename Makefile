@@ -11,7 +11,7 @@ start-debug:
 start-release:
 	./Scripts/package_app.sh release
 	pkill -x TokenBar || pkill -f TokenBar.app || true
-	cd /Users/steipete/Projects/tokenbar && open -n /Users/steipete/Projects/tokenbar/TokenBar.app
+	cd /Users/sunny/本地文件/TokenBar && open -n /Users/sunny/本地文件/TokenBar/TokenBar.app
 
 restart: start
 

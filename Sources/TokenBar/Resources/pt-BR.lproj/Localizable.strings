@@ -168,7 +168,7 @@
 "Managed Codex accounts unavailable" = "Contas Codex gerenciadas indisponíveis";
 "Managed account storage is unreadable. Live account access is still available, " = "O armazenamento de contas gerenciadas está ilegível. O acesso à conta ativa ainda está disponível, ";
 "Manual" = "Manual";
-"May your tokens never run out—keep agent limits in view." = "Que seus tokens nunca acabem — mantenha os limites dos agentes à vista.";
+"AI usage and quota tracker for your menu bar." = "AI usage and quota tracker for your menu bar.";
 "Menu bar" = "Barra de menus";
 "Menu bar auto-shows the provider closest to its rate limit." = "A barra de menus mostra automaticamente o provedor mais próximo do limite de taxa.";
 "Menu bar metric" = "Métrica da barra de menus";
@@ -386,7 +386,7 @@
 "version_format" = "Versão %@";
 "vertex_ai_login_instructions" = "Para acompanhar o uso do Vertex AI, autentique-se no Google Cloud.\n\n1. Abra o Terminal\n2. Execute: gcloud auth application-default login\n3. Siga os prompts no navegador para entrar\n4. Defina seu projeto: gcloud config set project PROJECT_ID\n\nAbrir o Terminal agora?";
 "workspaceID is set but only opencode, opencodego, and deepgram support workspaceID." = "workspaceID está definido, mas somente opencode, opencodego e deepgram oferecem suporte a workspaceID.";
-"© 2026 Peter Steinberger. MIT License." = "© 2026 Peter Steinberger. Licença MIT.";
+"© 2026 Sunny891024. MIT License." = "MIT License.";
 
 /* General Pane */
 "section_system" = "Sistema";
@@ -526,7 +526,7 @@
 "disable_keychain_access_subtitle" = "Impede qualquer acesso ao Keychain quando ativado.";
 
 /* About Pane */
-"about_tagline" = "Que seus tokens nunca acabem — mantenha os limites dos agentes à vista.";
+"about_tagline" = "AI usage and quota tracker for your menu bar.";
 "link_github" = "GitHub";
 "link_website" = "Site";
 "link_twitter" = "Twitter";
@@ -535,7 +535,7 @@
 "update_channel" = "Canal de atualização";
 "check_for_updates" = "Buscar atualizações…";
 "updates_unavailable" = "Atualizações indisponíveis nesta build.";
-"copyright" = "© 2026 Peter Steinberger. Licença MIT.";
+"copyright" = "MIT License.";
 
 /* Debug Pane */
 "section_logging" = "Logs";

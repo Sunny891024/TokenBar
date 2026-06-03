@@ -9,7 +9,7 @@ const cname = fs.readFileSync(path.join(docsDir, "CNAME"), "utf8").trim();
 const origin = "https://" + cname;
 const productName = "TokenBar";
 const productDescription = "TokenBar shows OpenAI Codex and Claude Code usage limits in the macOS menu bar.";
-const source = "https://github.com/steipete/TokenBar";
+const source = "https://github.com/Sunny891024/TokenBar";
 
 const pages = allHtml(docsDir)
   .map((file) => {

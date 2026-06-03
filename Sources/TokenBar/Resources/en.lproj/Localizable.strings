@@ -168,7 +168,7 @@
 "Managed Codex accounts unavailable" = "Managed Codex accounts unavailable";
 "Managed account storage is unreadable. Live account access is still available, " = "Managed account storage is unreadable. Live account access is still available, ";
 "Manual" = "Manual";
-"May your tokens never run out—keep agent limits in view." = "May your tokens never run out—keep agent limits in view.";
+"AI usage and quota tracker for your menu bar." = "AI usage and quota tracker for your menu bar.";
 "Menu bar" = "Menu bar";
 "Menu bar auto-shows the provider closest to its rate limit." = "Menu bar auto-shows the provider closest to its rate limit.";
 "Menu bar metric" = "Menu bar metric";
@@ -386,7 +386,7 @@
 "version_format" = "Version %@";
 "vertex_ai_login_instructions" = "To track Vertex AI usage, authenticate with Google Cloud.\n\n1. Open Terminal\n2. Run: gcloud auth application-default login\n3. Follow the browser prompts to sign in\n4. Set your project: gcloud config set project PROJECT_ID\n\nOpen Terminal now?";
 "workspaceID is set but only opencode, opencodego, and deepgram support workspaceID." = "workspaceID is set but only opencode, opencodego, and deepgram support workspaceID.";
-"© 2026 Peter Steinberger. MIT License." = "© 2026 Peter Steinberger. MIT License.";
+"© 2026 Sunny891024. MIT License." = "MIT License.";
 
 /* General Pane */
 "section_system" = "System";
@@ -537,7 +537,7 @@
 "disable_keychain_access_subtitle" = "Prevents any Keychain access while enabled.";
 
 /* About Pane */
-"about_tagline" = "May your tokens never run out—keep agent limits in view.";
+"about_tagline" = "AI usage and quota tracker for your menu bar.";
 "link_github" = "GitHub";
 "link_website" = "Website";
 "link_twitter" = "Twitter";
@@ -546,7 +546,7 @@
 "update_channel" = "Update Channel";
 "check_for_updates" = "Check for Updates…";
 "updates_unavailable" = "Updates unavailable in this build.";
-"copyright" = "© 2026 Peter Steinberger. MIT License.";
+"copyright" = "MIT License.";
 
 /* Debug Pane */
 "section_logging" = "Logging";

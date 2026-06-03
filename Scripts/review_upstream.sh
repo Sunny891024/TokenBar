@@ -34,13 +34,13 @@ ensure_remote() {
     if [ "$remote" = "upstream" ] && git remote get-url origin >/dev/null 2>&1; then
         origin_url=$(git remote get-url origin)
         case "$origin_url" in
-            https://github.com/steipete/TokenBar|https://github.com/steipete/TokenBar.git|git@github.com:steipete/TokenBar.git)
-                echo -e "${YELLOW}Remote 'upstream' missing; using origin for steipete/TokenBar.${NC}" >&2
+            https://github.com/Sunny891024/TokenBar|https://github.com/Sunny891024/TokenBar.git|git@github.com:Sunny891024/TokenBar.git)
+                echo -e "${YELLOW}Remote 'upstream' missing; using origin for Sunny891024/TokenBar.${NC}" >&2
                 echo "origin"
                 return 0
                 ;;
             *)
-                echo -e "${YELLOW}Remote 'upstream' missing; origin is not steipete/TokenBar, adding upstream.${NC}" >&2
+                echo -e "${YELLOW}Remote 'upstream' missing; origin is not Sunny891024/TokenBar, adding upstream.${NC}" >&2
                 ;;
         esac
     fi
@@ -76,7 +76,7 @@ remote_default_branch() {
 }
 
 case "$UPSTREAM" in
-    upstream) REMOTE=$(ensure_remote upstream "https://github.com/steipete/TokenBar.git") ;;
+    upstream) REMOTE=$(ensure_remote upstream "https://github.com/Sunny891024/TokenBar.git") ;;
     quotio) REMOTE=$(ensure_remote quotio "https://github.com/nguyenphutrong/quotio.git") ;;
 esac
 

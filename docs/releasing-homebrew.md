@@ -17,7 +17,7 @@ Homebrew is for the UI app via Cask. When installed via Homebrew, TokenBar disab
 Follow `docs/RELEASING.md` to publish `TokenBar-macos-universal-<version>.zip` to GitHub Releases.
 
 ## 2) Let the Release CLI workflow update the tap
-After the GitHub release is published, `.github/workflows/release-cli.yml` builds the standalone CLI assets and dispatches `steipete/homebrew-tap`'s `update-formula.yml`. That tap workflow updates both:
+After the GitHub release is published, `.github/workflows/release-cli.yml` builds the standalone CLI assets and dispatches `Sunny891024/homebrew-tap`'s `update-formula.yml`. That tap workflow updates both:
 - `Casks/tokenbar.rb` for the app zip.
 - `Formula/tokenbar.rb` for the standalone CLI tarballs.
 
@@ -41,9 +41,9 @@ In `../homebrew-tap`, update the formula at `Formula/tokenbar.rb`:
 ## 3) Verify install
 ```sh
 brew uninstall --cask tokenbar || true
-brew untap steipete/tap || true
-brew tap steipete/tap
-brew install --cask steipete/tap/tokenbar
+brew untap Sunny891024/tap || true
+brew tap Sunny891024/tap
+brew install --cask Sunny891024/tap/tokenbar
 open -a TokenBar
 ```
 

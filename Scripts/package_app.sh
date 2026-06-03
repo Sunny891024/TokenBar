@@ -124,7 +124,7 @@ if [[ -f "$ICON_SOURCE" ]]; then
 fi
 
 BUNDLE_ID="com.tokenbar.tokenbar"
-FEED_URL="https://raw.githubusercontent.com/steipete/TokenBar/main/appcast.xml"
+FEED_URL="https://raw.githubusercontent.com/Sunny891024/TokenBar/main/appcast.xml"
 AUTO_CHECKS=true
 if [[ "$LOWER_CONF" == "debug" ]]; then
   BUNDLE_ID="com.tokenbar.tokenbar.debug"
@@ -194,7 +194,7 @@ cat > "$APP/Contents/Info.plist" <<PLIST
     <key>LSMinimumSystemVersion</key><string>14.0</string>
     <key>LSUIElement</key><true/>
     <key>CFBundleIconFile</key><string>Icon</string>
-    <key>NSHumanReadableCopyright</key><string>© 2026 Peter Steinberger. MIT License.</string>
+    <key>NSHumanReadableCopyright</key><string>MIT License.</string>
     <key>SUFeedURL</key><string>${FEED_URL}</string>
     <key>SUPublicEDKey</key><string>AGCY8w5vHirVfGGDGc8Szc5iuOqupZSh9pMj/Qs67XI=</string>
     <key>SUEnableAutomaticChecks</key><${AUTO_CHECKS}/>
@@ -381,8 +381,13 @@ elif [[ "$ALLOW_LLDB" == "1" ]]; then
   CODESIGN_ID="-"
   CODESIGN_ARGS=(--force --sign "$CODESIGN_ID")
 else
-  CODESIGN_ID="${APP_IDENTITY:-Developer ID Application: Peter Steinberger (Y5PE65HELJ)}"
-  CODESIGN_ARGS=(--force --timestamp --options runtime --sign "$CODESIGN_ID")
+  if [[ -n "${APP_IDENTITY:-}" ]]; then
+    CODESIGN_ID="$APP_IDENTITY"
+    CODESIGN_ARGS=(--force --timestamp --options runtime --sign "$CODESIGN_ID")
+  else
+    CODESIGN_ID="-"
+    CODESIGN_ARGS=(--force --sign "$CODESIGN_ID")
+  fi
 fi
 function resign() { codesign "${CODESIGN_ARGS[@]}" "$1"; }
   # Sign innermost binaries first, then the framework root to seal resources

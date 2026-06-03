@@ -615,7 +615,7 @@
 - Augment: prefer Auggie CLI usage with web fallback, plus session refresh + recovery tools (#142). Thanks @bcharleson!
 - Amp: add provider with Amp Free usage tracking (#167). Thanks @duailibe!
 - Synthetic: add API-key usage provider with quota snapshots (#171). Thanks @monotykamary!
-- JetBrains AI: include IDEs missing quota files, expand custom paths, and add Android Studio base paths (#194). Thanks @steipete!
+- JetBrains AI: include IDEs missing quota files, expand custom paths, and add Android Studio base paths (#194).
 - JetBrains AI: detect IDE directories case-insensitively (#200). Thanks @zerone0x!
 - Cursor: support legacy request-based plans and show individual on-demand usage (#125) — thanks @vltansky
 - Cursor: avoid Intel crash when opening login and harden WebKit teardown. Thanks @meghanto!
@@ -859,7 +859,7 @@
 - Claude trust prompts (“Do you trust the files in this folder?”) are now auto-accepted during probes to prevent stuck refreshes. Thanks @tobihagemann!
 
 ## 0.8.0 — 2025-12-17
-- TokenBar is now available via Homebrew: `brew install --cask steipete/tap/tokenbar` (updates via `brew upgrade --cask steipete/tap/tokenbar`).
+- TokenBar is now available via Homebrew: `brew install --cask Sunny891024/tap/tokenbar` (updates via `brew upgrade --cask Sunny891024/tap/tokenbar`).
 - Added session quota notifications for the sliding 5-hour window (Codex + Claude): notifies when it hits 0% and when it’s available again, based only on observed refresh data (including startup when already depleted). Thanks @GKannanDev!
 
 ## 0.7.3 — 2025-12-17

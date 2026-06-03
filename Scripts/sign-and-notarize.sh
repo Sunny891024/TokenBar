@@ -2,11 +2,16 @@
 set -euo pipefail
 
 APP_NAME="TokenBar"
-APP_IDENTITY="Developer ID Application: Peter Steinberger (Y5PE65HELJ)"
+APP_IDENTITY="${APP_IDENTITY:-}"
 APP_BUNDLE="TokenBar.app"
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 source "$ROOT/version.env"
 source "$ROOT/Scripts/release_artifacts.sh"
+
+if [[ -z "$APP_IDENTITY" ]]; then
+  echo "Missing APP_IDENTITY env var, e.g. 'Developer ID Application: Your Name (TEAMID)'." >&2
+  exit 1
+fi
 
 # Allow building a universal binary if ARCHES is provided; default to universal (arm64 + x86_64).
 ARCHES_VALUE=${ARCHES:-"arm64 x86_64"}

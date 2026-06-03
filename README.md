@@ -1,15 +1,12 @@
-# TokenBar 🎚️ — May your tokens never run out.
+# TokenBar
 
 > Every AI coding limit, in your menu bar.
 
-[![Latest release](https://img.shields.io/github/v/release/steipete/TokenBar?style=flat-square&color=0a0a0c)](https://github.com/steipete/TokenBar/releases/latest)
-[![macOS 14+](https://img.shields.io/badge/macOS-14%2B-0a0a0c?style=flat-square)](https://github.com/steipete/TokenBar/releases/latest)
-[![Homebrew](https://img.shields.io/badge/brew-steipete%2Ftap%2Ftokenbar-orange?style=flat-square)](https://github.com/steipete/homebrew-tap)
-[![AUR](https://img.shields.io/aur/version/tokenbar-cli?style=flat-square&color=1793d1)](https://aur.archlinux.org/packages/tokenbar-cli)
+[![Latest release](https://img.shields.io/github/v/release/Sunny891024/TokenBar?style=flat-square&color=0a0a0c)](https://github.com/Sunny891024/TokenBar/releases/latest)
+[![macOS 14+](https://img.shields.io/badge/macOS-14%2B-0a0a0c?style=flat-square)](https://github.com/Sunny891024/TokenBar/releases/latest)
 [![License: MIT](https://img.shields.io/badge/license-MIT-6e5aff?style=flat-square)](LICENSE)
-[![Site](https://img.shields.io/badge/site-tokenbar.app-16d3b4?style=flat-square)](https://tokenbar.app)
 
-<a href="https://tokenbar.app"><img src="docs/social.png" alt="TokenBar — every AI coding limit in your menu bar. 40+ providers." width="100%" /></a>
+<img src="docs/social.png" alt="TokenBar — every AI coding limit in your menu bar. 40+ providers." width="100%" />
 
 Tiny macOS 14+ menu bar app that keeps **AI coding-provider limits visible** and shows when each window resets. Codex, OpenAI, Claude, Cursor, Gemini, Copilot, Grok, GroqCloud, ElevenLabs, Deepgram, z.ai, MiniMax, Kiro, Vertex AI, Augment, OpenRouter, LLM Proxy, Codebuff, Command Code, AWS Bedrock, and many newer coding providers. One status item per provider, or Merge Icons mode with a provider switcher. No Dock icon, minimal UI, dynamic bar icons.
 
@@ -34,23 +31,10 @@ TokenBar 是一款 macOS 14+ 菜单栏工具，用来集中查看多个 AI 编�
 - macOS 14+ (Sonoma)
 
 ### GitHub Releases
-Download: <https://github.com/steipete/TokenBar/releases>
-
-### Homebrew
-```bash
-brew install --cask steipete/tap/tokenbar
-```
+Download: <https://github.com/Sunny891024/TokenBar/releases>
 
 ### CLI Tarballs (macOS/Linux)
-Homebrew formula (Linux today):
-```bash
-brew install steipete/tap/tokenbar
-```
-Arch Linux AUR package:
-```bash
-yay -S tokenbar-cli
-```
-Or download release tarballs from GitHub Releases:
+Download release tarballs from GitHub Releases:
 - macOS: `TokenBarCLI-v<tag>-macos-arm64.tar.gz`, `TokenBarCLI-v<tag>-macos-x86_64.tar.gz`
 - Linux: `TokenBarCLI-v<tag>-linux-aarch64.tar.gz`, `TokenBarCLI-v<tag>-linux-x86_64.tar.gz`
 
@@ -146,7 +130,7 @@ show an incident indicator.
 - Privacy-first: on-device parsing by default; browser cookies are opt-in and reused (no passwords stored).
 
 ## Privacy note
-Wondering if TokenBar scans your disk? It doesn’t crawl your filesystem; it reads a small set of known locations (browser cookies/local storage, provider config files, local JSONL logs) when the related features are enabled. Provider tokens and token-account settings live in `~/.tokenbar/config.json` with restrictive file permissions. See the discussion and audit notes in [issue #12](https://github.com/steipete/TokenBar/issues/12).
+Wondering if TokenBar scans your disk? It doesn’t crawl your filesystem; it reads a small set of known locations (browser cookies/local storage, provider config files, local JSONL logs) when the related features are enabled. Provider tokens and token-account settings live in `~/.tokenbar/config.json` with restrictive file permissions.
 
 ## macOS permissions (why they’re needed)
 - **Full Disk Access (optional)**: only required to read Safari cookies/local storage for web-based providers. If you don’t grant it, use another supported browser, manual cookies/API keys, OAuth, or CLI/local sources where that provider supports them.
@@ -215,11 +199,6 @@ CLI install:
 ./bin/install-tokenbar-cli.sh
 ```
 
-## Related
-- ✂️ [Trimmy](https://github.com/steipete/Trimmy) — “Paste once, run once.” Flatten multi-line shell snippets so they paste and run.
-- 🧳 [MCPorter](https://mcporter.dev) — TypeScript toolkit + CLI for Model Context Protocol servers.
-- 🧿 [oracle](https://askoracle.dev) — Ask the oracle when you're stuck. Invoke GPT-5 Pro with a custom context and files.
-
 ## Looking for a Windows version?
 - [Win-TokenBar](https://github.com/Finesssee/Win-TokenBar)
 
@@ -233,4 +212,4 @@ CLI install:
 Inspired by [ccusage](https://github.com/ryoppippi/ccusage) (MIT), specifically the cost usage tracking.
 
 ## License
-MIT • Peter Steinberger ([steipete](https://twitter.com/steipete))
+MIT

@@ -2,7 +2,7 @@
 
 Date: 2026-02-19
 Workspace: /Users/michalkrsik/windsurf_project_folder/TokenBar
-Issue: https://github.com/steipete/tokenbar/issues/139
+Issue: https://github.com/Sunny891024/TokenBar/issues/139
 
 ## Purpose
 

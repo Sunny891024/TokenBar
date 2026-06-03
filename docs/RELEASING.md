@@ -25,7 +25,7 @@ SwiftPM-only; package/sign/notarize manually (no Xcode project). Sparkle feed is
 
 ## Prereqs
 - Xcode 26+ installed at `/Applications/Xcode.app` (for ictool/iconutil and SDKs).
-- Developer ID Application cert installed: `Developer ID Application: Peter Steinberger (Y5PE65HELJ)`.
+- Developer ID Application cert installed: `Developer ID Application: Sunny891024 (Y5PE65HELJ)`.
 - ASC API creds in env: `APP_STORE_CONNECT_API_KEY_P8`, `APP_STORE_CONNECT_KEY_ID`, `APP_STORE_CONNECT_ISSUER_ID`.
 - Sparkle keys: public key expectation is in `.mac-release.env`; TokenBar still uses the older shared AGCY key, so the manifest includes the local Dropbox fallback path. `SPARKLE_PRIVATE_KEY_FILE` overrides it.
 - Ensure shell has release env vars loaded (usually `source ~/.profile`) before running `Scripts/release.sh`.
@@ -59,7 +59,7 @@ Gotchas fixed:
 After notarization, or let `Scripts/release.sh` do this:
 ```
 ./Scripts/make_appcast.sh TokenBar-macos-universal-0.1.0.zip \
-  https://raw.githubusercontent.com/steipete/TokenBar/main/appcast.xml
+  https://raw.githubusercontent.com/Sunny891024/TokenBar/main/appcast.xml
 ```
 Generates HTML release notes from `CHANGELOG.md` (via `Scripts/changelog-to-html.sh`) and embeds them into the appcast entry.
 Uploads not handled automatically—commit/publish appcast + zip to the feed location (GitHub Releases/raw URL).
@@ -84,7 +84,7 @@ After publishing the GitHub release, `.github/workflows/release-cli.yml` builds 
 - [ ] Generate Sparkle appcast via `Scripts/release.sh` or `Scripts/make_appcast.sh`; use `SPARKLE_PRIVATE_KEY_FILE` only if overriding Keychain signing.
   - Upload the dSYM archive alongside the app zip on the GitHub release; the release script now automates this and will fail if it’s missing.
   - After publishing the release and the Release CLI workflow finishes, run `Scripts/check-release-assets.sh <tag>` to confirm the app zip, dSYM zip, CLI tarballs, and CLI checksums are present on GitHub.
-  - Generate the appcast + HTML release notes: `./Scripts/make_appcast.sh TokenBar-macos-universal-<ver>.zip https://raw.githubusercontent.com/steipete/TokenBar/main/appcast.xml`
+  - Generate the appcast + HTML release notes: `./Scripts/make_appcast.sh TokenBar-macos-universal-<ver>.zip https://raw.githubusercontent.com/Sunny891024/TokenBar/main/appcast.xml`
   - Beta channel: prefix the command with `SPARKLE_CHANNEL=beta` to tag the entry.
   - Verify the enclosure signature + size: `./Scripts/verify_appcast.sh <ver>`
 - [ ] Upload zip + appcast to feed; publish tag + GitHub release so Sparkle URL is live (avoid 404)
@@ -92,8 +92,8 @@ After publishing the GitHub release, `.github/workflows/release-cli.yml` builds 
   - `gh run watch <release-cli-run-id> --exit-status`
   - `Scripts/check-release-assets.sh v<version>`
   - `brew uninstall --cask tokenbar || true`
-  - `brew untap steipete/tap || true; brew tap steipete/tap`
-  - `brew install --cask steipete/tap/tokenbar && open -a TokenBar`
+  - `brew untap Sunny891024/tap || true; brew tap Sunny891024/tap`
+  - `brew install --cask Sunny891024/tap/tokenbar && open -a TokenBar`
 - [ ] Version continuity: confirm the new version is the immediate next patch/minor (no gaps) and CHANGELOG has no skipped numbers (e.g., after 0.2.0 use 0.2.1, not 0.2.2)
 - [ ] Changelog sanity: single top-level title, no duplicate version sections, versions strictly descending with no repeats
 - [ ] Release pages: title format `TokenBar <version>`, notes as Markdown list (no stray blank lines)
