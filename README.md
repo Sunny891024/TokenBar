@@ -13,6 +13,12 @@
 
 Tiny macOS 14+ menu bar app that keeps **AI coding-provider limits visible** and shows when each window resets. Codex, OpenAI, Claude, Cursor, Gemini, Copilot, Grok, GroqCloud, ElevenLabs, Deepgram, z.ai, MiniMax, Kiro, Vertex AI, Augment, OpenRouter, LLM Proxy, Codebuff, Command Code, AWS Bedrock, and many newer coding providers. One status item per provider, or Merge Icons mode with a provider switcher. No Dock icon, minimal UI, dynamic bar icons.
 
+## 中文说明
+
+TokenBar 是一款 macOS 14+ 菜单栏工具，用来集中查看多个 AI 编程服务的额度、用量、费用和重置时间。它支持 Codex、OpenAI、Claude、Cursor、Gemini、Copilot、Grok、OpenRouter、DeepSeek、Kimi、MiniMax、AWS Bedrock 等常见服务，可以在菜单栏直接显示剩余额度、状态提醒和重置倒计时，方便判断什么时候适合继续使用或切换 provider。
+
+应用优先复用你本机已有的登录状态、CLI、OAuth、API key、浏览器 cookie 或本地配置文件，不会要求输入 provider 密码。适合经常使用多个 AI coding 工具、需要关注额度窗口和成本消耗的 macOS 用户。
+
 <img src="tokenbar.png" alt="TokenBar menu popover with provider tiles, usage bars, and reset countdowns" width="520" />
 
 ## Why
