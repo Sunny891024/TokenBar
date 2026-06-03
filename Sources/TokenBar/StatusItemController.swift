@@ -697,11 +697,11 @@ final class StatusItemController: NSObject, NSMenuDelegate, StatusItemControllin
         #if DEBUG
         guard !self.isReleasedForTesting else { return }
         #endif
-        let anyEnabled = !self.store.enabledProvidersForDisplay().isEmpty
+        _ = self.store.enabledProvidersForDisplay()  // Kept for side effects
         let force = self.store.debugForceAnimation
         let mergeIcons = self.shouldMergeIcons
         if mergeIcons {
-            self.statusItem.isVisible = anyEnabled || force
+            self.statusItem.isVisible = true  // Always show so users can access settings
             for provider in Array(self.statusItems.keys) {
                 self.removeProviderStatusItem(for: provider)
             }
