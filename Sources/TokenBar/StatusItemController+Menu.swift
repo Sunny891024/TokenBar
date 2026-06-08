@@ -1258,14 +1258,12 @@ extension StatusItemController {
         webItems: OpenAIWebMenuItems)
     {
         let hasUsageBlock = model.hasUsageContent
-        let hasCredits = model.creditsText != nil
         let hasExtraUsage = model.providerCost != nil
         let hasCost = model.tokenUsage != nil
         let hasStorage = self.store.storageFootprintText(for: provider) != nil
-        let bottomPadding = CGFloat(hasCredits ? 4 : 6)
+        let bottomPadding = CGFloat(6)
         let sectionSpacing = CGFloat(6)
         let usageBottomPadding = bottomPadding
-        let creditsBottomPadding = bottomPadding
 
         if hasUsageBlock {
             let usageView = UsageMenuCardHeaderAndUsageSectionView(
@@ -1290,40 +1288,17 @@ extension StatusItemController {
             menu.addItem(self.makeMenuCardItem(headerView, id: "menuCardHeader", width: width))
         }
 
-        if hasStorage || hasCredits || hasExtraUsage || hasCost {
+        if hasStorage || hasExtraUsage || hasCost {
             menu.addItem(.separator())
         }
 
         if self.addStorageMenuCardSection(to: menu, provider: provider, width: width),
-           hasCredits || hasExtraUsage || hasCost
+           hasExtraUsage || hasCost
         {
             menu.addItem(.separator())
         }
 
-        if hasCredits {
-            if hasExtraUsage || hasCost {
-                menu.addItem(.separator())
-            }
-            let creditsView = UsageMenuCardCreditsSectionView(
-                model: model,
-                showBottomDivider: false,
-                topPadding: sectionSpacing,
-                bottomPadding: creditsBottomPadding,
-                width: width)
-            let creditsSubmenu = webItems.hasCreditsHistory ? self.makeCreditsHistorySubmenu(width: width) : nil
-            menu.addItem(self.makeMenuCardItem(
-                creditsView,
-                id: "menuCardCredits",
-                width: width,
-                submenu: creditsSubmenu))
-            if webItems.canShowBuyCredits {
-                menu.addItem(self.makeBuyCreditsItem())
-            }
-        }
         if hasExtraUsage {
-            if hasCredits {
-                menu.addItem(.separator())
-            }
             let extraUsageSubmenu = self.makeOpenAIAPIUsageSubmenu(provider: provider, width: width)
             let extraUsageView = UsageMenuCardExtraUsageSectionView(
                 model: model,
@@ -1337,7 +1312,7 @@ extension StatusItemController {
                 submenu: extraUsageSubmenu))
         }
         if hasCost {
-            if hasCredits || hasExtraUsage {
+            if hasExtraUsage {
                 menu.addItem(.separator())
             }
             let costSubmenu = webItems.hasCostHistory ? self

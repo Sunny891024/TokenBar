@@ -383,12 +383,8 @@ struct StatusMenuTests {
 
         func hasOpenAIWebSubmenus(_ menu: NSMenu) -> Bool {
             let usageItem = menu.items.first { ($0.representedObject as? String) == "menuCardUsage" }
-            let creditsItem = menu.items.first { ($0.representedObject as? String) == "menuCardCredits" }
-            let hasUsageBreakdown = usageItem?.submenu?.items
+            return usageItem?.submenu?.items
                 .contains { ($0.representedObject as? String) == "usageBreakdownChart" } == true
-            let hasCreditsHistory = creditsItem?.submenu?.items
-                .contains { ($0.representedObject as? String) == "creditsHistoryChart" } == true
-            return hasUsageBreakdown || hasCreditsHistory
         }
 
         let menu = controller.makeMenu()
@@ -746,7 +742,7 @@ struct StatusMenuTests {
         #expect(!titles.contains("Status Page"))
         #expect(titles.contains("Refresh"))
         #expect(titles.contains("Settings..."))
-        #expect(titles.contains("About TokenBar"))
+        #expect(!titles.contains("About TokenBar"))
         #expect(titles.contains("Quit"))
         #expect(menu.items.contains { $0.toolTip?.hasPrefix("TokenBar ") == true })
 
@@ -1164,13 +1160,10 @@ extension StatusMenuTests {
         let menu = controller.makeMenu()
         controller.menuWillOpen(menu)
         let usageItem = menu.items.first { ($0.representedObject as? String) == "menuCardUsage" }
-        let creditsItem = menu.items.first { ($0.representedObject as? String) == "menuCardCredits" }
         #expect(
             usageItem?.submenu?.items
                 .contains { ($0.representedObject as? String) == "usageBreakdownChart" } == true)
-        #expect(
-            creditsItem?.submenu?.items
-                .contains { ($0.representedObject as? String) == "creditsHistoryChart" } == true)
+        #expect(menu.items.contains { ($0.representedObject as? String) == "menuCardCredits" } == false)
     }
 
     @Test
@@ -1227,7 +1220,7 @@ extension StatusMenuTests {
     }
 
     @Test
-    func `shows credits before cost in codex menu card sections`() throws {
+    func `hides credits while keeping cost in codex menu card sections`() {
         self.disableMenuCardsForTesting()
         let settings = self.makeSettings()
         settings.statusChecksEnabled = false
@@ -1289,11 +1282,9 @@ extension StatusMenuTests {
         let menu = controller.makeMenu()
         controller.menuWillOpen(menu)
         let ids = menu.items.compactMap { $0.representedObject as? String }
-        let creditsIndex = ids.firstIndex(of: "menuCardCredits")
         let costIndex = ids.firstIndex(of: "menuCardCost")
-        #expect(creditsIndex != nil)
+        #expect(ids.contains("menuCardCredits") == false)
         #expect(costIndex != nil)
-        #expect(try #require(creditsIndex) < costIndex!)
     }
 
     @Test
