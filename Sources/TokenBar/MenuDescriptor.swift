@@ -573,6 +573,7 @@ struct MenuDescriptor {
         if updateReady {
             entries.append(.action(L("Update ready, restart now?"), .installUpdate))
         }
+        entries.append(.text(Self.appVersionLine(), .secondary))
         entries.append(contentsOf: [
             .action(L("Refresh"), .refresh),
             .action(L("Settings..."), .settings),
@@ -580,6 +581,13 @@ struct MenuDescriptor {
             .action(L("Quit"), .quit),
         ])
         return Section(entries: entries)
+    }
+
+    private static func appVersionLine(bundle: Bundle = .main) -> String {
+        let version = bundle.object(forInfoDictionaryKey: "CFBundleShortVersionString") as? String ?? "–"
+        let build = bundle.object(forInfoDictionaryKey: "CFBundleVersion") as? String
+        let versionString = build.map { "\(version) (\($0))" } ?? version
+        return "TokenBar \(versionString)"
     }
 
     private static func statusLine(for provider: UsageProvider?, store: UsageStore) -> String? {

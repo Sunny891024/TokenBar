@@ -748,6 +748,7 @@ struct StatusMenuTests {
         #expect(titles.contains("Settings..."))
         #expect(titles.contains("About TokenBar"))
         #expect(titles.contains("Quit"))
+        #expect(menu.items.contains { $0.toolTip?.hasPrefix("TokenBar ") == true })
 
         let refreshItem = menu.items.first { $0.title == "Refresh" }
         #expect(refreshItem != nil)
